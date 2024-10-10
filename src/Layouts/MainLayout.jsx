@@ -5,7 +5,6 @@ function MainLayout() {
     return ( 
         <>
             <Navbar />
-            <h1>Car Care AI</h1>
             <Outlet />
         </>
      );
