@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import Chatbot from "../components/Chatbot";
+import Chatbox from "../components/Chatbox";
 import img1 from "../assets/Car Care AI.png"
+
 
 function Home() {
     return ( 
@@ -40,7 +41,7 @@ function Home() {
                 </div>
             </div>
 
-        <Chatbot />
+        <Chatbox />
 
  
         </section>
