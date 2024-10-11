@@ -60,7 +60,9 @@ function Chatbox() {
     
 // Scroll to the bottom of the chat when a new message is added
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        if (messages.length > 1) {
+            messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        }
     }, [messages]);
 
     return (
@@ -82,7 +84,7 @@ function Chatbox() {
                                 />
                             </div>
                         </div>
-                        <div className="chat-bubble text-left">{content}</div>
+                        <div className={`chat-bubble text-left ${role === 'bot' ? 'bg-white' : 'bg-blue-300'}`}>{content}</div>
                     </div>
                 ))}
                 {loading && (
